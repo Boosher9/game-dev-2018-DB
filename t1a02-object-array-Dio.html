@@ -3,20 +3,17 @@ open debug window ctrl-shift-i<br><br>
 
 myCoolObject = 
 <input id="myInput" type=text size=100 
-value='{"x":"5", "y":"2", "myArray": [3, 7,8]}'><br>
+value='{"x":"5", "y":"2", "z":"33", "xy":"352",  "myArray": [3, 7,8]}'><br>
 
 <input type=button value="show Object" onclick="{
-
   myCoolObject = JSON.parse(document.getElementById('myInput').value) 
-
   document.getElementById('myDiv01').innerHTML = `This is x: `+
-   myCoolObject.x +`, this is y: ` + myCoolObject.y + `<br>` +
+   myCoolObject.x +`, This is y: ` + myCoolObject.y + `<br>` +
+   ` This is z: ` + myCoolObject.z + 
+   `, This is xy: ` + myCoolObject.xy + `<br>` +
    `Lets print an array `+ myCoolObject.myArray + `<br>` +
    `Lets print the last number of the array `+
     myCoolObject.myArray[2] + `<br>`  
-
-
 }"><br>
 
 <div id="myDiv01">...</div> 
-

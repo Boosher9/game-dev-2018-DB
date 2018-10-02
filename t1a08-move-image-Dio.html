@@ -1,5 +1,46 @@
 <h2 align=center>My Moving Images by Dio</h2>
+<script>
+document.onkeydown = checkKey;
 
+function checkKey(myEvent) {
+   document.getElementById('myDiv01').innerHTML = 'keyCode: '+myEvent.keyCode
+   if (myEvent.keyCode == 87){ 
+ document.getElementById('myImage01').style.top = 
+              parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' }
+
+   if (myEvent.keyCode == 65){
+ document.getElementById('myImage01').style.left = 
+              parseInt(document.getElementById('myImage01').style.left) - 5 + 'px'}
+
+if (myEvent.keyCode == 83){ 
+ document.getElementById('myImage01').style.top = 
+              parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' }
+
+   if (myEvent.keyCode == 68){
+ document.getElementById('myImage01').style.left = 
+              parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'}
+
+if (myEvent.keyCode == 38){ 
+ document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) - 5 + 'px' }
+
+   if (myEvent.keyCode == 37){
+ document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) - 5 + 'px'}
+
+if (myEvent.keyCode == 40){ 
+ document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) + 5 + 'px' }
+
+   if (myEvent.keyCode == 39){
+ document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) + 5 + 'px'}
+
+}
+</script>
+
+
+<div id="myDiv01">...</div>  
 <img id="myImage01" width=400
 src="https://ubisafe.org/images/person-transparent-walking-3.gif" style="position:absolute; left:500px; top:400px;">
 

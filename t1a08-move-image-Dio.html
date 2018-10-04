@@ -25,13 +25,18 @@ myStart = new Date().getTime()
 
 document.onkeydown = checkKey;
 
-// For rotation: document.getElementById('').style.transform= 'rotate(90d
+// For rotation: document.getElementById('').style.transform= 'rotate(90deg)'
 
-function checkKey(myEvent) {
+function checkKey(myEvent){
    let myEnd = new Date().getTime()
    let myDuration = Math.round((myEnd-myStart)/1000)
    document.getElementById('myDiv01').innerHTML = 'seconds: ' + myDuration +
 ', keyCode: '+myEvent.keyCode
+
+function checkDifferentKey(){
+   let myEnd = new Date().getTime()
+   let myDuration = Math.round((myEnd-myStart)/1000)
+   document.getElementById('myDiv01').innerHTML = 'seconds: ' + myDuration}
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP (Moth wins)')
@@ -98,10 +103,11 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 
 <table border=1>
 <tr><td><input type=button value="Up+Left" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) - 5 + 'px'
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' 
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) - 5 + 'px'
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) - 5 + 'px' 
+            document.getElementById('myImage02').style.transform = 'rotate(315deg)' 
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -110,8 +116,10 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 }"></td> 
    
     <td><input type=button value="Up" onclick="{
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' 
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) - 5 + 'px'
+           document.getElementById('myImage02').style.transform = 'rotate(0deg)' 
+
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -120,10 +128,11 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 }"></td> 
 
     <td><input type=button value="Up+Right" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' 
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) + 5 + 'px'
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) - 5 + 'px' 
+           document.getElementById('myImage02').style.transform = 'rotate(45deg)'
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -131,8 +140,9 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 
 }"></td></tr>
 <tr><td><input type=button value="Left" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) - 5 + 'px' 
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) - 5 + 'px' 
+           document.getElementById('myImage02').style.transform = 'rotate(270deg)'   
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -144,8 +154,9 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 
    
     <td><input type=button value="Right" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) + 5 + 'px'
+           document.getElementById('myImage02').style.transform = 'rotate(90deg)'
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -154,10 +165,11 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 }"></td></tr> 
 
 <tr><td><input type=button value="Down+Left" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) - 5 + 'px'
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' 
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) - 5 + 'px'
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) + 5 + 'px' 
+           document.getElementById('myImage02').style.transform = 'rotate(225deg)'
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
@@ -166,20 +178,21 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 }"></td>
 
     <td><input type=button value="Down" onclick="{
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' 
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) + 5 + 'px' 
+           document.getElementById('myImage02').style.transform = 'rotate(180deg)'
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
 }
 
 }"></td>
-    <td><input type=button value="Down+Left" onclick="{
-           document.getElementById('myImage01').style.left = 
-              parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
-           document.getElementById('myImage01').style.top = 
-              parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' 
-
+    <td><input type=button value="Down+Right" onclick="{
+           document.getElementById('myImage02').style.left = 
+              parseInt(document.getElementById('myImage02').style.left) + 5 + 'px'
+           document.getElementById('myImage02').style.top = 
+              parseInt(document.getElementById('myImage02').style.top) + 5 + 'px' 
+           document.getElementById('myImage02').style.transform = 'rotate(135deg)'
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP')
 }

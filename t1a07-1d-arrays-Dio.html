@@ -1,20 +1,8 @@
 <h2 align=center> 1D Arrays by Fred</h2>
 
-<input type=text value=3 id="myText01" >
+<input type=text value=20 id="myText01" >
 
 <input type=button value="1D Array" onclick="{
-  document.getElementById('myDiv01').innerHTML = ' '
-   myProgramTerms = [] // create an array 
-    myProgramTerms[0] = `variables`
-    myProgramTerms[1] = `decisions`
-    myProgramTerms[2] = `for loops`
-
-  for (let myLoop=0; myLoop < 3; myLoop++ ){
-   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
-  } 
-}">
-
-<input type=button value="Other 1D Array" onclick="{
   document.getElementById('myDiv01').innerHTML = ' '
    myProgramTerms = [] // create an array 
     myProgramTerms[0] = `variables`
@@ -26,6 +14,104 @@
   } 
 }">
 
+<input type=button value="Other 1D Array" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = `variables`
+    myProgramTerms[1] = `decisions`
+    myProgramTerms[2] = `for loops`
+    myProgramTerms[3] = 'arrays'
+    myProgramTerms[4] = 'objects and classes'
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
+
+<input type=button value="Another 1D Array" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = `Classes:`
+    myProgramTerms[1] = `Social Studies,`
+    myProgramTerms[2] = `English,`
+    myProgramTerms[3] = 'Science,'
+    myProgramTerms[4] = 'Math,'
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
+
+<input type=button value="Phone Brand Array" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = 'Iphone'
+    myProgramTerms[1] = 'Samsung'
+    myProgramTerms[2] = 'LG'
+    myProgramTerms[3] = 'Nokia'
+    myProgramTerms[4] = 'Windows (But not really)'
+    myProgramTerms[5] = 'OnePlus'
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
+
+<input type=button value="Continents Array" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = `North America`
+    myProgramTerms[1] = `South America`
+    myProgramTerms[2] = `Europe`
+    myProgramTerms[3] = 'Africa'
+    myProgramTerms[4] = 'Asia'
+    myProgramTerms[5] = 'Australia'
+    myProgramTerms[6] = 'Antarctica'
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
+
+<input type=button value="Random Numbers" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = `32`
+    myProgramTerms[1] = `213`
+    myProgramTerms[2] = `382371829`
+    myProgramTerms[3] = '3'
+    myProgramTerms[4] = '423891230128390381290381903123'
+    myProgramTerms[5] = '434'
+    myProgramTerms[6] = '42069'
+    myProgramTerms[7] = '234235245'
+    myProgramTerms[8] = '1'
+
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
+
+<input type=button value="Keyboard Spam Array" onclick="{
+  document.getElementById('myDiv01').innerHTML = ' '
+   myProgramTerms = [] // create an array 
+    myProgramTerms[0] = `sdadkniogwed`
+    myProgramTerms[1] = `asdkafncqwienwfdfsd`
+    myProgramTerms[2] = `sdkncqioinqwijei nskvdsdfcasd`
+    myProgramTerms[3] = 'd swne fjalbdubagurgb gkj gae'
+    myProgramTerms[4] = 'sda fnjehfh ajkf ghk jja;fh dklnaggkhnknfdsgknbafdbnjfgnasdjkfnu jrr'
+    myProgramTerms[5] = 'Hey'
+    myProgramTerms[6] = 'Dsh asjfshdjhajkahdfjksd gvwerbvabv jhlh aju fbsd'
+    myProgramTerms[7] = 'r ooljeg jfd gk nklagn kd gnaf aaf nkn gklfnad klajgk fhgk fhdgklfh gkalgflagnkfh gaf;n kjgafjk g'
+    myProgramTerms[8] = 'sdwbvfajfn'
+    myProgramTerms[9] = 'djaklnsionwi jrfiqfwedfasdfavdf'
+    myProgramTerms[10] = ' vbjkb jkbjkeaa fj gbjsd gbfd bid gjg bbfgbruiogregufhguf ufd'
+
+
+  for (let myLoop=0; myLoop < document.getElementById('myText01').value ; myLoop++ ){
+   document.getElementById('myDiv01').innerHTML += myLoop + ': ' + myProgramTerms[myLoop] + `<br>` 
+  } 
+}">
 
 <div id="myDiv01">...</div> 
 

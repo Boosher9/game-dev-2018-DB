@@ -1,3 +1,4 @@
+<audio id="myMusic" src="talk-spanish-to-me.mp3"></audio> 
 <body style = "background: url(https://www.mycozycabins.com/wp-content/uploads/2016/09/MD16_11-1024x768.jpg); background-size: 100% 100%;" >
 <h2 align=center>My Moving Images by Dio</h2>
 
@@ -21,6 +22,12 @@ function myHitOther(my1,my2){
 </script> 
 
 <script>
+
+
+function startMusic() {
+   document.getElementById('myMusic').play()
+} 
+
 myStart = new Date().getTime()
 
 document.onkeydown = checkKey;
@@ -33,16 +40,14 @@ function checkKey(myEvent){
    document.getElementById('myDiv01').innerHTML = 'seconds: ' + myDuration +
 ', keyCode: '+myEvent.keyCode
 
-function checkDifferentKey(){
-   let myEnd = new Date().getTime()
-   let myDuration = Math.round((myEnd-myStart)/1000)
-   document.getElementById('myDiv01').innerHTML = 'seconds: ' + myDuration}
+startMusic()
+
 
    if (myHitOther ('myImage01','myImage02')){
       alert('LAMP (Moth wins)')
 }
 
-   if (myDuration >= 60){
+   if (myDuration >= 30){
        alert('Electrician has not arrived (LAMP wins)')
 }
 
@@ -200,6 +205,14 @@ src="https://vignette.wikia.nocookie.net/fallout/images/b/b0/Blue_table_lamp.png
 }"></td></tr>
 
 </table>  
+
+<audio id=myMusic src='https://soundcloud.com/willows-soundclown/talk-spanish-to-me'>
+
+
+
+
+
+
 
 
  

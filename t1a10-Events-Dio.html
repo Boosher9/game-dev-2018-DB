@@ -1,0 +1,64 @@
+<h2 align=center>Tons of Events by Dio </h2> 
+
+<b>Double Click</b><br><br>
+
+<div id="myDiv01" style="background:#33FFF3; width:50px; height:50;" onDblClick="{
+
+// document.getElementById('myDiv01').innerHTML = ''
+
+if (document.getElementById('myOutput01').innerHTML == '...'){
+   document.getElementById('myOutput01').innerHTML = ''
+}
+
+
+document.getElementById('myOutput01').innerHTML += 'Double Click Event Activated <br>'
+
+}">Double Click This</div><br>
+
+<div id="myOutput01">...</div> <br><br>
+
+
+<b>Text Change</b><br><br>
+
+<input type=text value="Change me" onChange="{
+
+// document.getElementById('myDiv01').innerHTML = ''
+
+if (document.getElementById('myOutput02').innerHTML == '...'){
+   document.getElementById('myOutput02').innerHTML = ''
+}
+
+
+document.getElementById('myOutput02').innerHTML += 'You changed the text <br>'
+
+}">
+
+<br><div id="myOutput02">...</div><br>
+
+
+<b>Scroll</b><br><br>
+
+<div id="Scroll" style="border:1px; width: 200px; height: 100px; overflow: scroll;" onScroll="{
+  
+   document.getElementById('myOutput03').innerHTML = ''
+
+   document.getElementById('myOutput03').innerHTML += 'You sawed this boat in half' 
+
+}"> "Hey<br><br><br><br><br><br><br><br><br><br>
+
+This is the bottom of the div"</div>
+
+
+<br><div id="myOutput03">...</div><br>
+ 
+<b>Select</b><br><br> 
+
+<input type=text value="Select me" onselect="{
+
+    document.getElementById('myOutput04').innerHTML = 'You gave me a blue border'
+
+}">
+
+<br><div id="myOutput04">...</div><br> 
+
+

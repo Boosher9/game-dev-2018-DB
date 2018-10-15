@@ -1,16 +1,25 @@
 <h2 align=center>If Statements by Dio</h2>
 
-<input id="myIn" type=text value=2>
+
+<p>Begin your quest at 1</p>
+<p>Any negative number</p>
+<p>Starting Value
+<p>Number between 3 and 1000</p>
+<p>Number that is divisible by 4</p>
+<p>666</p>
+<p>42069</p>
+
+<input id="myIn" type=text value=3>
 
 <input type=button value="decision if statement" onclick="{
   document.getElementById('myOut').innerHTML = ' '
 
 
-  x= document.getElementById('myIn').value
+  x = document.getElementById('myIn').value
 
  if (( x >= 3)&&( x <= 1000)){
   document.getElementById('myOut').innerHTML +=
-     'wow the number is between 3 and 1000<br>'  
+     'Wow, the number is between 3 and 1000<br>'  
     
   }
   
@@ -28,8 +37,55 @@
 
   if (x % 4 == 0){
   document.getElementById('myOut').innerHTML +=
-    'This number is divisible by 4'
+    'This number is divisible by 4 <br>'
 
+  }
+
+  if (x == 3){
+  document.getElementById('myOut').innerHTML +=
+    'This is your starting number' 
+  }
+
+
+  if (x <= 0){
+  document.getElementById('myOut').innerHTML +=
+    'That is a Negative Number' 
+  }
+
+
+  if (x == 1){
+  document.getElementById('myOut').innerHTML +=
+    'Take 10 steps forward' 
+  }
+
+
+  if (x == 11){
+  document.getElementById('myOut').innerHTML +=
+    'Take 5 steps back' 
+  }
+
+
+  if (x == 6){
+  document.getElementById('myOut').innerHTML +=
+    'Multiply by 4' 
+  }
+
+
+  if (x == 24){
+  document.getElementById('myOut').innerHTML +=
+    'Subtract the starting number' 
+  }
+
+
+  if (x == 23){
+  document.getElementById('myOut').innerHTML +=
+    'Multiply by 3' 
+  }
+
+
+  if (x == 69){
+  document.getElementById('myOut').innerHTML +=
+    'heh' 
   }
 
 }">

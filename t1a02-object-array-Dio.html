@@ -5,9 +5,26 @@ myCoolObject =
 <input id="myInput" type=text size=100 
 value='{"x":"5", "y":"2", "z":"33", "xy":"352",  "myArray": [3, 7,8]}'><br>
 
+myOtherCoolObject = 
+<input id="myOtherInput" type=text size=100 
+value='{"x":"Tye", "y":"Needs", "z":"Friends", "xy":"Now",  "myArray": ["Tye", "Needs", "Friends"]}'><br>
+
+<input type=button value="show Object" onclick="{
+  myOtherCoolObject = JSON.parse(document.getElementById('myOtherInput').value) 
+  document.getElementById('myDiv01').innerHTML = `This is x: `+
+   myOtherCoolObject.x + `<br>`+ `This is y: ` + myOtherCoolObject.y + `<br>` +
+   ` This is z: ` + myOtherCoolObject.z +`<br>`+ 
+   ` This is xy: ` + myOtherCoolObject.xy + `<br>` +
+   `Lets print an array: `+ myOtherCoolObject.myArray + `<br>` +
+   `Lets print the last number of the array: `+
+    myOtherCoolObject.myArray[2] + `<br>`  
+}"><br>
+
+<div id="myDiv01">...</div> 
+
 <input type=button value="show Object" onclick="{
   myCoolObject = JSON.parse(document.getElementById('myInput').value) 
-  document.getElementById('myDiv01').innerHTML = `This is x: `+
+  document.getElementById('myDiv02').innerHTML = `This is x: `+
    myCoolObject.x +`, This is y: ` + myCoolObject.y + `<br>` +
    ` This is z: ` + myCoolObject.z + 
    `, This is xy: ` + myCoolObject.xy + `<br>` +
@@ -16,4 +33,4 @@ value='{"x":"5", "y":"2", "z":"33", "xy":"352",  "myArray": [3, 7,8]}'><br>
     myCoolObject.myArray[2] + `<br>`  
 }"><br>
 
-<div id="myDiv01">...</div> 
+<div id="myDiv02">...</div>

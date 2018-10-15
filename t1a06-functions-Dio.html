@@ -1,3 +1,91 @@
-<script> 
-function myfun(){
-   document.getElementById('myDiv01').innerHTML 
+<audio id="myMusic" src="Eurobeat.mp3"></audio> 
+<script>
+function mySquare(){
+   document.getElementById('myDiv01').innerHTML = `Number Squared: `+ 
+     document.getElementById('myText01').value *    document.getElementById('myText01').value
+}
+
+function myMultiply(){
+   document.getElementById('myDiv02').innerHTML = `Numbers Multiplied: `+
+     document.getElementById('myText02').value * document.getElementById('myText03').value 
+}
+function myMusic(){
+   document.getElementById('myMusic').play()
+}
+
+function myAddition(){
+   document.getElementById('myDiv03').innerHTML = `Numbers Added: `+
+     (parseFloat(document.getElementById('myText04').value) + parseFloat(document.getElementById('myText05').value)) 
+}
+
+function mySubtraction(){
+   document.getElementById('myDiv04').innerHTML = `Numbers Subtracted: `+
+     (parseFloat(document.getElementById('myText06').value) - parseFloat(document.getElementById('myText07').value)) 
+}
+
+</script>
+
+<h2 align=center> Functions by Dio</h2>
+
+<b>Square</b><br>
+
+<input type=text value=3 id="myText01">
+
+<input type=button value="Square" onclick="{
+    mySquare()
+}">
+
+<div id="myDiv01">...</div><br>
+
+<b>Multiplication</b>
+
+<p>1st Number</p>
+<input type=text value="1st Number" id="myText02">
+<p>2nd Number</p>
+<input type=text value="2nd Number" id="myText03">
+
+<input type=button value="Multiply" onclick="{
+    myMultiply()
+
+}">
+
+<div id="myDiv02">...</div><br>
+
+<b>Addition</b><br>
+<p>1st Number</p>
+<input type=text value="1st Number" id="myText04">
+<p>2nd Number</p>
+<input type=text value="2nd Number" id="myText05">
+
+<input type=button value="Add" onclick="{
+    myAddition()
+
+}">
+
+<div id="myDiv03">...</div><br>
+
+<b>Subtraction</b><br>
+<p>1st Number</p>
+<input type=text value="1st Number" id="myText06">
+<p>2nd Number</p>
+<input type=text value="2nd Number" id="myText07">
+
+<input type=button value="Subtract" onclick="{
+    mySubtraction()
+
+}">
+
+<div id="myDiv04">...</div><br>
+
+<b>Music</b><br>
+<input type=button value="Click for intense study beat" onclick="{
+    myMusic()
+}">
+
+
+
+
+
+
+
+

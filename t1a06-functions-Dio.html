@@ -1,8 +1,24 @@
 <audio id="myMusic" src="Eurobeat.mp3"></audio> 
 <script>
+function myBackground(){
+  if (document.getElementById('myColour01').value = "#00FFFF"){ 
+   document.getElementById('myBackground').style = "background-color:#00FFFF; text-align:left; vertical-align: middle; padding:20px 47px;"
+} 
+
+  if (document.getElementById('myColour01').value = "#00FF80"){ 
+   document.getElementById('myBackground').style = "background-color:#00FF80; text-align:left; vertical-align: middle; padding:20px 47px;"
+} 
+
+}
+
 function mySquare(){
    document.getElementById('myDiv01').innerHTML = `Number Squared: `+ 
      document.getElementById('myText01').value *    document.getElementById('myText01').value
+}
+
+function myDivision(){
+   document.getElementById('myDiv05').innerHTML = `Numbers Divided: `+
+     document.getElementById('myText08').value / document.getElementById('myText09').value 
 }
 
 function myMultiply(){
@@ -27,6 +43,23 @@ function mySubtraction(){
 
 <h2 align=center> Functions by Dio</h2>
 
+<div id="myBackground" style="background-color:#cccccc; text-align:left; vertical-align: middle; padding:20px 47px;">
+
+<b>Background</b><br><br>
+
+<font color=#00FFFF>Light Blue</font><br>
+<p>#00FFFF</p><br>
+
+<font color=#00FF80>Emerald</font><br>
+<p>#00FF80</p><br>
+
+<p>Colour Code Box</p>
+<input type=text value="#00FFFF" id="myColour01">
+
+<input type=button value="Change Background" onclick="{
+   myBackground()
+}"><br><br>  
+
 <b>Square</b><br>
 
 <input type=text value=3 id="myText01">
@@ -36,20 +69,6 @@ function mySubtraction(){
 }">
 
 <div id="myDiv01">...</div><br>
-
-<b>Multiplication</b>
-
-<p>1st Number</p>
-<input type=text value="1st Number" id="myText02">
-<p>2nd Number</p>
-<input type=text value="2nd Number" id="myText03">
-
-<input type=button value="Multiply" onclick="{
-    myMultiply()
-
-}">
-
-<div id="myDiv02">...</div><br>
 
 <b>Addition</b><br>
 <p>1st Number</p>
@@ -77,15 +96,40 @@ function mySubtraction(){
 
 <div id="myDiv04">...</div><br>
 
+<b>Multiplication</b>
+
+<p>1st Number</p>
+<input type=text value="1st Number" id="myText02">
+<p>2nd Number</p>
+<input type=text value="2nd Number" id="myText03">
+
+<input type=button value="Multiply" onclick="{
+    myMultiply()
+
+}">
+
+<div id="myDiv02">...</div><br>
+
+
+<b>Division</b><br>
+<p>1st Number</p> 
+<input type=text value="1st Number" id="myText08">
+<p>2nd Number</p>
+<input type=text value="2nd Number" id="myText09">
+
+<input type=button value="Divide" onclick="{
+   myDivision()
+}"> 
+
+<div id="myDiv05">...</div><br>
+
+
 <b>Music</b><br>
 <input type=button value="Click for intense study beat" onclick="{
     myMusic()
-}">
+}"><br><br>
 
 
 
-
-
-
-
+</div>
 

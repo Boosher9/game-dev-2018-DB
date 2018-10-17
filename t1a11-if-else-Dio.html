@@ -1,0 +1,35 @@
+<h2 align=center>If Else Statements by Dio</h2>
+<input id="myIn" type=text value=2> 
+
+<input type=button value="decisions if statement" onclick="{
+  document.getElementById('myOut').innerHTML = ''
+
+x = document.getElementById('myIn').value
+
+  if (x <=3){
+   if ((x < 3)&&(x > 0)){
+    document.getElementById('myOut').innerHTML += 'This number is positive and less than 3'
+    } else {
+    if (x == -3){
+      document.getElementById('myOut').innerHTML += 'This is a 3 in negative form. Still not of any value to me'
+     } else { 
+     if (((x <= 0)&&(x >= -2))||((x <= -4)&&(x >= -9))){
+         document.getElementById('myOut').innerHTML += 'Negative numbers have no value to me'
+       } else {
+      if((x <= -10)&&(x >= -99)){
+            document.getElementById('myOut').innerHTML += 'Wow, double digits. Neato'
+        } else {
+           document.getElementById('myOut').innerHTML += 'okay, woah. Triple digits. Getting big in the negatives'
+ }}}}} else {
+    if ((x > 3)&&(x <= 99)){
+    document.getElementById('myOut').innerHTML += 'This number is much greater than 3 will ever be'
+    } else {
+     if((x >= 100)&&(x <= 999)){
+            document.getElementById('myOut').innerHTML += 'Okay, positive triple digits. '
+        } else {
+           document.getElementById('myOut').innerHTML += 'Stop, no more digits. 4 is enough.r'
+}}}
+
+}">
+
+<div id="myOut">...</div> 

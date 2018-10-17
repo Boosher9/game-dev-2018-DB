@@ -61,4 +61,19 @@ This is the bottom of the div</div>
 
 <br><div id="myOutput04">...</div><br> 
 
+<b>Mouse Over</b><br><br>
+
+<div id="myDiv01" style="background:#00FFFF; width:50px; height:50;" onmouseover="{
+
+if (document.getElementById('myOutput05').innerHTML == '...'){
+   document.getElementById('myOutput05').innerHTML = ''
+}
+
+
+document.getElementById('myOutput05').innerHTML += 'Hover Over Event Activated<br>'
+
+}">Double Click This</div><br>
+
+<div id="myOutput05">...</div> <br><br>
+
 

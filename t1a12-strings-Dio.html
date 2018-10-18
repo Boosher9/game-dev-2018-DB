@@ -1,0 +1,57 @@
+<h2 align=center> String Manipulation functions by Dio</h2>
+<input id="myIn01" type=text value="Word, Cat">
+
+<input type=button value=".toUpperCase()" onclick="{
+
+  document.getElementById('myOut01').innerHTML =
+    document.getElementById('myIn01').value.toUpperCase()
+
+}">
+
+<div id="myOut01">...</div>
+
+<input id="myIn02" type=text value="Something, Cool">
+
+<input type=button value=".startsWith()" onclick="{
+
+  document.getElementById('myOut02').innerHTML =
+    document.getElementById('myIn02').value.startsWith('Something,')
+
+}">
+
+<div id="myOut02">...</div>
+
+<input id="myIn03" type=text value="Dell is like a bell, it will swell when it has fell">
+
+<input type=button value=".match()" onclick="{
+
+  document.getElementById('myOut03').innerHTML =
+    document.getElementById('myIn03').value.match(/ell/g)
+
+}">
+
+<div id="myOut03">...</div>
+
+<input id="myIn04" type=text value="This will be the day we waited for">
+
+<input type=button value=".search()" onclick="{
+
+  document.getElementById('myOut04').innerHTML =
+    document.getElementById('myIn04').value.search('day')
+
+}">
+
+<div id="myOut04">...</div>
+
+<input id="myIn05" type=text value="Computers are great. Computers are fun. Computers are determining my final grade for the semester.">
+
+<input type=button value=".replace" onclick="{
+
+  document.getElementById('myOut05').innerHTML =
+    document.getElementById('myIn05').value.replace(/Computers/g, 'Teachers')
+
+}">
+
+<div id="myOut05">...</div>
+
+<a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">lookup</a>

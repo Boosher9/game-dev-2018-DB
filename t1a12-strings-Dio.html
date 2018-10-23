@@ -1,4 +1,8 @@
 <h2 align=center> String Manipulation functions by Dio</h2>
+
+<b>.toUpperCase()</b>
+<p>Changes the text to Upper Case</p>
+
 <input id="myIn01" type=text value="Word, Cat">
 
 <input type=button value=".toUpperCase()" onclick="{
@@ -8,33 +12,56 @@
 
 }">
 
-<div id="myOut01">...</div>
+<div id="myOut01">...</div><br>
+
+<b>.toLowerCase()</b>
+<p>Changes the text to Lower Case</p>
+
+<input id="myIn07" type=text value="I like to SCREAM OUT LOUD">
+
+<input type=button value=".toLowerCase()" onclick="{
+
+  document.getElementById('myOut07').innerHTML =
+    document.getElementById('myIn07').value.toLowerCase()
+
+}">
+
+<div id="myOut07">...</div><br>
+
+<b>.startsWith()</b>
+<p>Will tell you if the sentence starts with something</p>
 
 <input id="myIn02" type=text value="Something, Cool">
 
-<input type=button value=".startsWith()" onclick="{
+<input type=button value=".startsWith('Something,')" onclick="{
 
   document.getElementById('myOut02').innerHTML =
     document.getElementById('myIn02').value.startsWith('Something,')
 
 }">
 
-<div id="myOut02">...</div>
+<div id="myOut02">...</div><br>
+
+<b>.match()</b>
+<p>Will search for a value within a sentence and then returns the match</p>
 
 <input id="myIn03" type=text value="Dell is like a bell, it will swell when it has fell">
 
-<input type=button value=".match()" onclick="{
+<input type=button value=".match(/ell/g)" onclick="{
 
   document.getElementById('myOut03').innerHTML =
     document.getElementById('myIn03').value.match(/ell/g)
 
 }">
 
-<div id="myOut03">...</div>
+<div id="myOut03">...</div><br>
 
-<input id="myIn04" type=text value="This will be the day we waited for">
+<b>.search()</b>
+<p>Will return the position of a certain expression</p>
 
-<input type=button value=".search()" onclick="{
+<input id="myIn04" type=text value="How many days has it been">
+
+<input type=button value=".search('day')" onclick="{
 
   document.getElementById('myOut04').innerHTML =
     document.getElementById('myIn04').value.search('day')
@@ -43,9 +70,12 @@
 
 <div id="myOut04">...</div>
 
+<b>.replace()</b>
+<p>Will replace an expression in the sentence with another expression</p>
+
 <input id="myIn05" type=text value="Computers are great. Computers are fun. Computers are determining my final grade for the semester.">
 
-<input type=button value=".replace" onclick="{
+<input type=button value=".replace(/Computers/g, 'Teachers')" onclick="{
 
   document.getElementById('myOut05').innerHTML =
     document.getElementById('myIn05').value.replace(/Computers/g, 'Teachers')
@@ -53,5 +83,34 @@
 }">
 
 <div id="myOut05">...</div>
+
+<b>.Slice()</b>
+<p>Returns an expression within two values</p>
+
+<input id="myIn06" type=text value="How's the weather today, Billy?">
+
+<input type=button value=".slice(8, 17)" onclick="{
+
+  document.getElementById('myOut06').innerHTML =
+    document.getElementById('myIn06').value.slice(8, 17)
+
+}">
+
+<div id="myOut06">...</div>
+
+<b>.strike()</b>
+<p>Puts a strike through the expression</p>
+
+<input id="myIn08" type=text value="How's the weather today, Billy?">
+
+<input type=button value=".strike()" onclick="{
+
+  document.getElementById('myOut08').innerHTML =
+    document.getElementById('myIn08').value.strike()
+}">
+
+<div id="myOut08">...</div>
+
+
 
 <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">lookup</a>

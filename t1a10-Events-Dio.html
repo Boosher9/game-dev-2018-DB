@@ -1,5 +1,13 @@
 <h2 align=center>Tons of Events by Dio </h2> 
 
+<script>
+function myFunc() {
+     w = window.outerWidth;
+     h = window.outerHeight;
+document.getElementById("myOutput07").innerHTML += "Window size: Width=" + w + ", Height=" + h;
+}
+</script>
+
 <b>Double Click</b><br><br>
 
 <div id="myDiv01" style="background:#33FFF3; width:50px; height:50;" onDblClick="{
@@ -75,6 +83,50 @@ document.getElementById('myOutput05').innerHTML += 'Congratulations, you can aim
 }">Hover Over This</div><br>
 
 <div id="myOutput05">...</div> <br><br>
+
+<b>onPaste</b><br><br>
+
+<input type=text value="Paste Something" onpaste="{
+
+if (document.getElementById('myOutput06').innerHTML == '...'){
+   document.getElementById('myOutput06').innerHTML = ''
+}
+
+
+document.getElementById('myOutput06').innerHTML += 'Congrats, you plagarized'
+
+}">
+
+<div id="myOutput06">...</div> <br><br>
+
+<b>onResize</b><br><br>
+
+<body onresize="{
+
+ document.getElementById('myOutput07').innerHTML = ''
+
+myFunc()
+
+}">
+
+<div id="myOutput07">...</div> <br><br>
+
+<b>onplay</b><br><br>
+
+<audio controls id="myMusic" src="Eurobeat.mp3" onplay="{
+
+document.getElementById('myOutput08').innerHTML = ''
+
+document.getElementById('myOutput08').innerHTML = 'You played the video. Cool. Now get back to work'
+
+
+}"></audio>
+
+
+
+<div id="myOutput08">...</div> <br><br>
+
+
 
 
 

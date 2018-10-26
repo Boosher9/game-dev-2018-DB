@@ -1,0 +1,24 @@
+<h2 align=center>Passing to Functions by Dio</h2>
+<script>
+function myFun(myIn){
+  return myIn + '<br>'
+}
+
+function myFun01(myIn){
+   myFun01(document.getElementById("myIn02").value)
+}
+</script>
+
+<input id="myIn01" type=text value="">
+
+<input type=button value="myFun()" onclick="{
+  
+   document.getElementById('myOut01').innerHTML += myFun(document.getElementById('myIn01').value)
+
+}">
+
+<div id="myOut01"></div><br>
+
+<input id="myIn02" type=text>
+
+<input type=button value="myFun01" 

@@ -8,7 +8,7 @@ Store these Items in a Javascript object<br>
    "age": 50,
    "eyeColor": "blue"
 }
-</textarea><br>
+</textarea><br> 
 
 
 <input id="myButton128" type="button" value="Store as an object" onclick="{
@@ -23,4 +23,95 @@ Store these Items in a Javascript object<br>
 
 }"><br><br>
 
-<div id='myDiv128'>...</div><br>   
+<div id='myDiv128'>...</div><br> 
+
+
+<textarea id="myOtherTextAreaObject" rows="8" cols="70" wrap="false" > 
+{ "firstName": "Anthony",
+ "lastName" : "Pitt",
+ "age": "27",
+ "eyeColour": "Blue",
+ "Profession": "Construction Worker",
+ "Address": "123 Example Street" }
+</textarea><br>
+
+
+<input id="myButton01" type="button" value="Store as an object" onclick="{
+
+
+var myChosen = {}
+
+myChosen = 
+JSON.parse(document.getElementById('myOtherTextAreaObject').value)
+
+  document.getElementById('myDiv01').innerHTML = 'Name: ' + myChosen.firstName + 
+ ' ' + myChosen.lastName + ', Age: ' + myChosen.age + ', EyeColor: ' + myChosen.eyeColour + ', Profession: ' + myChosen.Profession + ', Address: ' + myChosen.Address + '<br>' 
+
+}"><br><br>
+
+<div id="myDiv01">...</div>
+
+<textarea id="myTextAreaObject01" rows="8" cols="70" wrap="false" > 
+{ "firstName": "Anthony",
+ "lastName" : "Pitt",
+ "age": "27",
+ "eyeColour": "Blue",
+ "Profession": "Construction Worker",
+ "Address": "123 Example Street" }
+</textarea><br>
+
+<input id="myButton01" type="button" value="Store as an object" onclick="{
+
+
+var myThing = {}
+
+myThing = 
+JSON.parse(document.getElementById('myTextAreaObject01').value)
+
+  document.getElementById('myDiv02').innerHTML = 'This man is named ' + myThing.firstName + 
+ '. He lives at ' + myThing.Address + ' and works as a ' + myThing.Profession + '<br>' 
+
+}"><br><br>
+
+<div id="myDiv02">...</div>
+
+<textarea id="myTextAreaObject02" rows="8" cols="70" wrap="false" > 
+{ "Company": "Loblaws",
+ "Store" : "SuperStore",
+ "Type": "Super Market",
+ "FoundedIn": "1919",
+ "Location": "Many provinces around Canada",
+ "Address": "123 Example Street" }
+</textarea><br>
+
+<input id="myButton02" type="button" value="Store as an object" onclick="{
+
+
+var mySomething = {}
+
+mySomething = 
+JSON.parse(document.getElementById('myTextAreaObject02').value)
+
+  document.getElementById('myDiv03').innerHTML = 'Company: ' + mySomething.Company + 
+ ', Store: ' + mySomething.Store + ', Type of Store: ' + mySomething.Type + ', Founded in: ' + mySomething.FoundedIn + ', Location: ' + 
+  mySomething.Location + ', Address: ' + mySomething.Address + '<br>' 
+
+}"><br><br>
+
+<div id="myDiv03">...</div><br>
+
+<input id="myButton02" type="button" value="Store as an object" onclick="{
+
+
+var mySomething = {}
+
+mySomething = 
+JSON.parse(document.getElementById('myTextAreaObject02').value)
+
+  document.getElementById('myDiv04').innerHTML = 'The Company known for bringing in the ' + mySomething.Type + 
+ ' known as ' + mySomething.Store + ' is known as the ' + mySomething.Company + ' Company. They were founded in ' + mySomething.FoundedIn + 'with locations in ' + 
+  mySomething.Location + '. One such location is based in Mission at ' + mySomething.Address + '. <br>' 
+
+}"><br><br>
+
+<div id="myDiv04">...</div>

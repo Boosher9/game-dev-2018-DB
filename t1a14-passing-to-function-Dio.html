@@ -4,7 +4,7 @@ function myFun(myIn){
   return myIn + '<br>'
 }
 
-function myFun01(myIn){
+function myFun01(myIn02){
    myFun01(document.getElementById("myIn02").value)
 }
 </script>
@@ -21,4 +21,8 @@ function myFun01(myIn){
 
 <input id="myIn02" type=text>
 
-<input type=button value="myFun01" 
+<input type=button value="myFun01" onclick="{
+    document.getElementById('myOut02').innerHTML += myFun01()
+}">
+
+<div id="myOut02"></div><br>

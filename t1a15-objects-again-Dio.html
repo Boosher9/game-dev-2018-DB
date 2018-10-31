@@ -2,7 +2,23 @@
 
 Store these Items in a Javascript object<br>
 
-<textarea id="myTextAreaObject" rows="8" cols="70" wrap="false">{
+
+
+<input type=button id="showObjects" value="Click to show all Objects" onclick="{
+
+	document.getElementById('myTextAreaObject').style = 'display:show;'
+
+	document.getElementById('myOtherTextAreaObject').style = 'display:show;'
+
+	document.getElementById('myTextAreaObject01').style = 'display:show;'
+
+	document.getElementById('myTextAreaObject02').style = 'display:show;'
+
+}"><br><br>
+
+
+
+<textarea id="myTextAreaObject" rows="8" cols="70" wrap="false" style="display:none;">{
    "firstName": "John",
    "lastName" : "Doe",
    "age": 50,
@@ -26,7 +42,7 @@ Store these Items in a Javascript object<br>
 <div id='myDiv128'>...</div><br> 
 
 
-<textarea id="myOtherTextAreaObject" rows="8" cols="70" wrap="false" > 
+<textarea id="myOtherTextAreaObject" style="display:none;" rows="8" cols="70" wrap="false" > 
 { "firstName": "Anthony",
  "lastName" : "Pitt",
  "age": "27",
@@ -51,7 +67,7 @@ JSON.parse(document.getElementById('myOtherTextAreaObject').value)
 
 <div id="myDiv01">...</div>
 
-<textarea id="myTextAreaObject01" rows="8" cols="70" wrap="false" > 
+<textarea id="myTextAreaObject01" style="display:none;" rows="8" cols="70" wrap="false" > 
 { "firstName": "Anthony",
  "lastName" : "Pitt",
  "age": "27",
@@ -75,7 +91,7 @@ JSON.parse(document.getElementById('myTextAreaObject01').value)
 
 <div id="myDiv02">...</div>
 
-<textarea id="myTextAreaObject02" rows="8" cols="70" wrap="false" > 
+<textarea id="myTextAreaObject02" style="display:none;" rows="8" cols="70" wrap="false" > 
 { "Company": "Loblaws",
  "Store" : "SuperStore",
  "Type": "Super Market",

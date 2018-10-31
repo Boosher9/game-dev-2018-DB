@@ -4,12 +4,16 @@ function myFun(myIn){
   return myIn + '<br>'
 }
 
-function myFun01(myIn02){
-   myFun01(document.getElementById("myIn02").value)
+function myFun01(myIn){
+  return myIn + ' almost got a negative on his assignment cause he decided to put music onto one too many of the assignments.'
+}
+
+function myFun02(myIn){
+   return myIn + ' * ' + myIn + ' = ' + Math.pow(parseFloat(myIn), parseFloat(myIn)) 
 }
 </script>
 
-<input id="myIn01" type=text value="">
+<input id="myIn01" type=text value="Howdy diddly ho, neighbourino">
 
 <input type=button value="myFun()" onclick="{
   
@@ -17,12 +21,35 @@ function myFun01(myIn02){
 
 }">
 
-<div id="myOut01"></div><br>
+<input type=button value="Change text to be something different" onclick="{
 
-<input id="myIn02" type=text>
+	document.getElementById('myIn01').value = 'Something Different'
 
-<input type=button value="myFun01" onclick="{
-    document.getElementById('myOut02').innerHTML += myFun01()
 }">
 
-<div id="myOut02"></div><br>
+	<div id="myOut01"></div><br>
+
+
+<input id="myIn02" type=text value="Tye">
+
+<input type=button value="myFun01()" onclick="{
+  
+   document.getElementById('myOut02').innerHTML = myFun01(document.getElementById('myIn02').value)
+
+}">
+
+	<div id="myOut02"></div><br>
+
+<input id="myIn03" type=text value="3">
+
+<input type=button value="myFun02()" onclick="{
+
+	document.getElementById('myOut03').innerHTML = myFun02(document.getElementById('myIn03').value)
+
+}">
+
+	<div id="myOut03"></div><br>  
+
+
+
+

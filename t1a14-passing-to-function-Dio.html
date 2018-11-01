@@ -5,11 +5,15 @@ function myFun(myIn){
 }
 
 function myFun01(myIn){
-  return myIn + ' almost got a negative on his assignment cause he decided to put music onto one too many of the assignments.'
+  return myIn + ' is failing the course out of sheer lazyness'
 }
 
 function myFun02(myIn){
    return myIn + ' * ' + myIn + ' = ' + Math.pow(parseFloat(myIn), parseFloat(myIn)) 
+}
+
+function myFun03(myIn){
+   return myIn
 }
 </script>
 
@@ -30,7 +34,7 @@ function myFun02(myIn){
 	<div id="myOut01"></div><br>
 
 
-<input id="myIn02" type=text value="Tye">
+<input id="myIn02" type=text value="Carl">
 
 <input type=button value="myFun01()" onclick="{
   
@@ -49,7 +53,15 @@ function myFun02(myIn){
 }">
 
 	<div id="myOut03"></div><br>  
+<input id="myIn05" type=text value="2"> 
+
+<input id="myIn04" type=button value='Random Number' onclick="{
+     document.getElementById('myIn05').value = myFun03(parseFloat(Math.random()))
+}"> 
 
 
+<input id="myIn04" type=button value='Print Random Number' onclick="{
+    document.getElementById('myOut04').innerHTML = document.getElementById('myIn05').value
+}"> 
 
-
+	<div id="myOut04"></div><br> 

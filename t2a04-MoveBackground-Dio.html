@@ -8,7 +8,7 @@
   
   <h2 align=center><font color = "white">T2A04-MoveBackground-Fred</h2>
 
-<img id="myImage01" width=75 src="http://pixelartmaker.com/art/03e3ba9c97661dc.png" style="position:absolute; left:300px; top:408px;"    
+<img id="myImage01" width=75 src="http://pixelartmaker.com/art/03e3ba9c97661dc.png" style="position:absolute; left:300px; top:408px;">    
   
    	<script>
 
@@ -36,6 +36,8 @@
    }">     
     
 <input type=button value="auto left" onclick="{
+                                            
+                                             
   clearInterval(myClock)
   myClock = setInterval(function(){document.getElementById('myButton01').click()}, 10)    
 myClock = setInterval(function(){   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 2 + 'px'                       }, 10)                         
@@ -46,8 +48,20 @@ myClock = setInterval(function(){   document.getElementById('myImage01').style.l
   myClock = setInterval(function(){document.getElementById('myButton02').click()}, 10)    
   myClock = setInterval(function(){   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 2 + 'px'                       }, 10)                                                       
    }">
+
+<input type=button value="auto other left" onclick="{
+                                            
+                                             
+  clearInterval(myClock)
+  myClock = setInterval(function(){document.getElementById('myButton01').click()}, 10)    
+myClock = setInterval(function(){   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 2 + 'px'                       }, 10)                         
+   }">
     
-    <div id="myDiv01"></div>    
+<input type=button value="auto other Right" onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){document.getElementById('myButton02').click()}, 10)    
+  myClock = setInterval(function(){   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 2 + 'px'                       }, 10)                                                       
+   }">    
     
 
 

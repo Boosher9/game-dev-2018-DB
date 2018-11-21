@@ -3,7 +3,10 @@
 <h2 align=center>Javascript Classes Introduction by Dio</h2>
 
 
-<input type=text id="myNameInput" placeholder="Enter an animal name here" value="">
+<input type=text id="myNameInput" placeholder="Enter an animal name here" value=""><br>
+
+
+<input type=text id="myAgeInput" placeholder="Enter an age here" value="">
 
 <input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
                                                                                  
@@ -14,17 +17,112 @@
     }
 
     myShow(){    
-       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years1 old<br>'
     }
 
  }  // end class myAnimal
                                                              
    
                                                                                  
-   myDog = new myAnimal(document.getElementById('myNameInput').value, 5)
+   myDog = new myAnimal(document.getElementById('myNameInput').value, document.getElementById('myAgeInput').value)
    myDog.myShow()      
 
                                                  
 }"><br><br>
 
+	<input type=text id="myOtherNameInput" placeholder="Enter an animal name here" value=""><br>
+
+
+	<input type=text id="myOtherAgeInput" placeholder="Enter an age here" value=""><br>
+
+
+        <input type=text id="myOtherBreedInput" placeholder="Enter an breed here" value="">
+
+	<input id="myButton131" type="button" value="Make and Show the class myOtherAnimal" onclick="{
+                                                                                 
+ 		class myOtherAnimal {
+    		     constructor(passName, passAge, passBreed) {
+       		        this.myName = passName;
+       		        this.myAge = passAge;
+                        this.myBreed = passBreed;
+               }
+
+    myShow(){    
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old. You are a ' + this.myBreed + '.'
+    }
+
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myDog = new myOtherAnimal(document.getElementById('myOtherNameInput').value, document.getElementById('myOtherAgeInput').value, document.getElementById('myOtherBreedInput').value)
+   myDog.myShow()      
+
+                                                 
+}"><br><br>
+		<i>Enter a number between 0 and 2</i><br><br>
+		<input type=text id="myRow" placeholder="Enter a number" value=""><br><br> 
+
+		<i>Enter a number between 0 and 4 </i><br><br> 
+	        <input type=text id="myColumn" placeholder="Enter a number" value=""><br>
+
+		<input id="myButton132" type="button" value="Make and Show the class myCar" onclick="{
+                                                                                 
+ 		class myUltraOtherAnimal {
+    		     constructor(passMake, passModel ) {
+       		        this.Make = passMake;
+       		        this.Model = passModel;
+                       
+               }
+
+    myShow(){    
+       document.getElementById('myDiv130').innerHTML = 'Make: ' + this.Make + ' Model: ' + this.Model 
+    }
+
+ }  // end class myAnimal
+                                                             
+   	let myDog = [document.getElementById('myRow').value]
+        myDog[0] = [document.getElementById('myColumn').value]
+	myDog[1] = [document.getElementById('myColumn').value]
+	myDog[2] = [document.getElementById('myColumn').value]
+
+	myDog[0][0] = new myUltraOtherAnimal('Pathfinder' , 2004)
+	myDog[0][1] = new myUltraOtherAnimal('Pathfinder' , 2005)
+	myDog[0][2] = new myUltraOtherAnimal('Pathfinder' , 2006)
+	myDog[0][3] = new myUltraOtherAnimal('Pathfinder' , 2007)
+	myDog[0][4] = new myUltraOtherAnimal('Pathfinder' , 2008)
+
+	myDog[1][0] = new myUltraOtherAnimal('Grand Caravan' , 2004)
+	myDog[1][1] = new myUltraOtherAnimal('Grand Caravan' , 2005)
+	myDog[1][2] = new myUltraOtherAnimal('Grand Caravan' , 2006)
+	myDog[1][3] = new myUltraOtherAnimal('Grand Caravan' , 2007)
+	myDog[1][4] = new myUltraOtherAnimal('Grand Caravan' , 2008)
+
+	myDog[2][0] = new myUltraOtherAnimal('Camry' , 2004)
+	myDog[2][1] = new myUltraOtherAnimal('Camry' , 2005)
+	myDog[2][2] = new myUltraOtherAnimal('Camry' , 2006)
+	myDog[2][3] = new myUltraOtherAnimal('Camry' , 2007)
+	myDog[2][4] = new myUltraOtherAnimal('Camry' , 2008)
+                                                                                 
+  if ((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 0)){myDog[0][0].myShow()}
+  if ((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 1)){myDog[0][1].myShow()}
+  if ((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 2)){myDog[0][2].myShow()}
+  if ((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 3)){myDog[0][3].myShow()}
+  if ((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 4)){myDog[0][4].myShow()}
+  if ((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 0)){myDog[1][0].myShow()}
+  if ((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 1)){myDog[1][1].myShow()}
+  if ((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 2)){myDog[1][2].myShow()}
+  if ((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 3)){myDog[1][3].myShow()}
+  if ((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 4)){myDog[1][4].myShow()}
+  if ((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 0)){myDog[2][0].myShow()}
+  if ((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 1)){myDog[2][1].myShow()}
+  if ((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 2)){myDog[2][2].myShow()}
+  if ((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 3)){myDog[2][3].myShow()}
+  if ((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 4)){myDog[2][4].myShow()}
+
+                                                 
+}"><br><br>
+
+
 <div id='myDiv130'>...</div><br>
+

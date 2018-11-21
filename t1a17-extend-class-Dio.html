@@ -1,0 +1,97 @@
+
+
+<h2 align=center>Javascript Class Extend by Dio</h2>
+
+
+<input type=text id="myNameInput" placeholder="Enter an animal name here" value=""><br>
+
+
+<input type=text id="myAgeInput" placeholder="Enter an age here" value=""><br> 
+
+
+<input type=text id="myBreedInput" placeholder="Enter the breed here" value="">
+
+<input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
+                                                                                 
+ class myAnimal {
+    constructor(passName, passAge, passBreed) {
+       this.myName = passName;
+       this.myAge = passAge;
+       this.myBreed = passBreed;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv01').innerHTML += 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old and you are a ' + this.myBreed
+    }
+
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myDog = new myAnimal(document.getElementById('myNameInput').value, document.getElementById('myAgeInput').value)
+   myDog.myShow() 
+
+class myCat extends myAnimal {
+     myShow(){
+        document.getElementById('myDiv01').innerHTML += this.myName + ' is a great cat who is ' + this.myAge 
+     }
+}     
+
+myPet = new myCat(document.getElementById('myNameInput').value, document.getElementById('myAgeInput').value, document.getElementById(''))
+myPet.myShow()
+                                                 
+}"><br><br>
+
+<div id="myDiv01"></div> 
+
+
+<input type=text id="myNameInput02" placeholder="Enter an animal name here" value=""><br>
+
+
+<input type=text id="myAgeInput02" placeholder="Enter an age here" value=""><br> 
+
+
+<input type=text id="myThing01" placeholder="Enter an age here" value="">
+
+<input id="myButton2" type="button" value="Make and Show the class myAnimal" onclick="{
+                                                                                 
+ class myStop {
+    constructor(passName, passStopDoingThis) {
+       this.myName = passName;
+       this.myStopDoingThis = passStopDoingThis;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv03').innerHTML += this.myName + ' needs to stop ' + this.myStopDoingThis + ' and starting using Joe for his shenanigans' + '<br>' 
+    }
+
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myTye = new myStop(document.getElementById('myNameInput02').value, document.getElementById('myAgeInput02').value)
+   myTye.myShow() 
+
+class myTable extends myStop {
+	constructor(passName, passStopDoingThis, passOtherAction){
+           super(passName, passStopDoingThis)
+           this.myOtherAction = passOtherAction; 
+}
+
+     myShow(){
+document.getElementById('myDiv03').innerHTML = ''
+document.getElementById('myDiv03').innerHTML += this.myName + ' needs to stop ' + this.myStopDoingThis + ' and start using Joe for his shenanigans.' + '<br>'  
+     }
+
+	myShow2(){
+document.getElementById('myDiv03').innerHTML += this.myName + ', Stop ' + this.myStopDoingThis + ' or I will ' + this.myOtherAction
+     }
+}     
+
+myTable = new myTable(document.getElementById('myNameInput02').value, document.getElementById('myAgeInput02').value, document.getElementById('myThing01').value)
+myTable.myShow()
+myTable.myShow2()
+                                                 
+}"><br><br>
+
+<div id="myDiv03">...</div> 

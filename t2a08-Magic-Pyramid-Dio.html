@@ -1,0 +1,45 @@
+<h2 align=center> T2A08-Magic Pyramid-Dio</h2> 
+
+<script>
+function generate(numRows) {
+    numRows = document.getElementById('myText01').value;  
+    var result = [];
+    if (numRows <= 0)
+           return result
+ 
+    var pre = [];
+    pre.push(1 + '<br>');
+    result.push(pre)
+ 
+    for (var i = 2; i <= numRows; i++) {
+        var cur = [];
+ 
+        cur.push(1); //first
+        for (var j = 0; j < pre.length - 1; j++) {
+            cur.push(pre[j] + pre[j + 1]); //middle
+        }
+        cur.push(1)//last
+ 
+        result.push(cur.join(' ') + '<br>');
+        pre = cur
+    }
+    return result.join(' ')
+}
+
+</script>
+
+
+
+
+<input type=text id="myText01" value=5 placeholder="Put numbers here"><br>
+
+<input type=button value="Click" onclick="{
+                                          
+document.getElementById('myDiv01').innerHTML = ''                                          
+                                          
+document.getElementById('myDiv01').innerHTML = generate()
+
+
+}">
+
+<div id="myDiv01">...</div>

@@ -1,0 +1,23 @@
+<img id="Test" src="http://pngimg.com/uploads/number1/number1_PNG14889.png" style="position: absolute; width:200px; left:800px; top:200px">
+
+<input type=button id="myTest" Value="Test" onclick="{
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+	  document.getElementById('Test').style.left = parseInt(document.getElementById('Test').style.left) - 5 + 'px'
+	}, 50)
+
+}">
+
+<script>
+let myClock
+let myClock2
+
+
+	 if (document.getElementById("Test").style.left == "200px"){
+		clearInterval(myClock)
+		clearInterval(myClock2)
+		myClock2 = setInterval(function(){
+		  document.getElementById('Test').style.top = parseInt(document.getElementById('Test').style.top) + 10 + 'px'
+		}, 50)
+	}
+</script> 	

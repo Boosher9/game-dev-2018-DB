@@ -1,0 +1,43 @@
+
+<style>
+body {
+  background-image: url(https://i.ibb.co/XSLHzF3/maxresdefault.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+img.Penguin {
+  position: absolute;
+  width: 20%;
+  left: 400px;
+  top: 340px
+}
+
+
+</style>
+
+
+
+<body onmousemove="Movement(event)" id="myBody"></body>
+
+<div id="myDiv">...</div>
+
+<img id="Penguin" src="https://i.ibb.co/Y8bFKkR/Penguin-Sprite.png" class="Penguin">
+
+
+<script>
+function Movement(e) {
+  var x = e.clientX;
+  var coor = x + "px";
+  document.getElementById("Penguin").style.left = coor;
+  document.getElementById("myDiv").innerHTML = coor;
+
+	if (x <= 235){
+	   document.getElementById("Penguin").style.left = "235px"
+	} 
+
+        if (x >= 785){ 
+           document.getElementById("Penguin").style.left = "785px"
+        }
+}
+</script> 

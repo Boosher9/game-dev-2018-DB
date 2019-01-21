@@ -5,15 +5,18 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
 img.Penguin {
   position: absolute;
-  width: 20%;
+  width: 18%;
   left: 400px;
-  top: 340px
+  top: 400px
 }
-
-
+img.Bag {
+  position: absolute;
+  width: 15%;
+  left: 400px;
+  top: 0px
+}
 </style>
 
 
@@ -23,21 +26,32 @@ img.Penguin {
 <div id="myDiv">...</div>
 
 <img id="Penguin" src="https://i.ibb.co/Y8bFKkR/Penguin-Sprite.png" class="Penguin">
+<img id="Bag" src="BeanBag.png" class="Bag"> 
+
+<input type=button value="Start" onclick="{
+Bag()
+}">
 
 
 <script>
+let myClock
+
 function Movement(e) {
   var x = e.clientX;
   var coor = x + "px";
   document.getElementById("Penguin").style.left = coor;
   document.getElementById("myDiv").innerHTML = coor;
-
 	if (x <= 235){
 	   document.getElementById("Penguin").style.left = "235px"
 	} 
-
-        if (x >= 785){ 
-           document.getElementById("Penguin").style.left = "785px"
+        if (x >= 1000){ 
+           document.getElementById("Penguin").style.left = "1000px"
         }
 }
+
+function Bag() {
+	myClock = setInterval(function(){
+		  document.getElementById("Bag").style.top = parseInt(document.getElementById("Bag").style.top) + 10 + 'px'
+		  }, 50)
+} 
 </script> 

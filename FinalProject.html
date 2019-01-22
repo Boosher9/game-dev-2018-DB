@@ -1,0 +1,75 @@
+<script>
+let myClock
+
+function Bag(){
+	clearInterval(myClock)
+	myClock = setInterval(BagMovement, 10)
+}
+
+function BagMovement(){
+	document.getElementById('Bag').style.top = parseInt(document.getElementById('Bag').style.top) + 5 + 'px';
+
+	document.getElementById('myDiv').innerHTML = document.getElementById('Bag').style.top;
+
+	if (document.getElementById('myDiv').innerHTML == '800px'){
+		document.getElementById('Bag').style.top = 0 + 'px'
+	}
+}
+
+function Movement(e) {
+  var x = e.clientX;
+  var coor = x + "px";
+  document.getElementById("Penguin").style.left = coor;
+	if (x <= 235){
+	   document.getElementById("Penguin").style.left = "235px"
+	} 
+        if (x >= 1000){ 
+           document.getElementById("Penguin").style.left = "1000px"
+        }
+}
+
+
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+</script> 
+
+
+<style>
+body {
+  background-image: url(https://i.ibb.co/XSLHzF3/maxresdefault.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+img.Penguin {
+  position: absolute;
+  width: 18%;
+  left: 400px;
+  top: 400px
+}
+</style>
+
+
+
+<body onmousemove="Movement(event)" onload="Bag()" id="myBody"></body>
+
+<div id="myDiv">...</div>
+
+<img id="Penguin" src="https://i.ibb.co/Y8bFKkR/Penguin-Sprite.png" class="Penguin">
+<img id="Bag" src="BeanBag.png" style="position: absolute; width: 15%; left: 400px; top: 0px;"> 
+
+
+

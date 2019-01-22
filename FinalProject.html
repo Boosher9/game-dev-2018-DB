@@ -1,34 +1,6 @@
 <script>
 let myClock
 
-function Bag(){
-	clearInterval(myClock)
-	myClock = setInterval(BagMovement, 10)
-}
-
-function BagMovement(){
-	document.getElementById('Bag').style.top = parseInt(document.getElementById('Bag').style.top) + 5 + 'px';
-
-	document.getElementById('myDiv').innerHTML = document.getElementById('Bag').style.top;
-
-	if (document.getElementById('myDiv').innerHTML == '800px'){
-		document.getElementById('Bag').style.top = 0 + 'px'
-	}
-}
-
-function Movement(e) {
-  var x = e.clientX;
-  var coor = x + "px";
-  document.getElementById("Penguin").style.left = coor;
-	if (x <= 235){
-	   document.getElementById("Penguin").style.left = "235px"
-	} 
-        if (x >= 1000){ 
-           document.getElementById("Penguin").style.left = "1000px"
-        }
-}
-
-
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -45,6 +17,47 @@ function myHitOther(my1,my2){
        return true
    }
 }
+
+function Bag(){
+	clearInterval(myClock)
+	myClock = setInterval(BagMovement, 10)
+}
+
+function BagMovement(){
+	document.getElementById('Bag').style.top = parseInt(document.getElementById('Bag').style.top) + 5 + 'px';
+
+	document.getElementById('myDiv').innerHTML = document.getElementById('Bag').style.top;
+
+	if (document.getElementById('myDiv').innerHTML == '800px'){
+		document.getElementById('Bag').style.top = 0 + 'px'
+	}
+
+	
+	if (myHitOther('Bag', 'Penguin')){
+	   document.getElementById('Score').innerHTML += 200
+	   document.getElementById('Bag').style.top = '0px'
+	}
+
+}
+
+function Movement(e) {
+  var x = e.clientX;
+  var coor = x + "px";
+  document.getElementById("Penguin").style.left = coor;
+	if (x <= 235){
+	   document.getElementById("Penguin").style.left = "235px"
+	} 
+        if (x >= 1000){ 
+           document.getElementById("Penguin").style.left = "1000px"
+        }
+
+	if (myHitOther('Bag', 'Penguin\')){
+	   document.getElementById('Score').innerHTML += 200
+	   document.getElementById('Bag').style.top = '0px'
+	}
+
+}
+
 </script> 
 
 
@@ -67,6 +80,7 @@ img.Penguin {
 <body onmousemove="Movement(event)" onload="Bag()" id="myBody"></body>
 
 <div id="myDiv">...</div>
+<div id="Score">...</div> 
 
 <img id="Penguin" src="https://i.ibb.co/Y8bFKkR/Penguin-Sprite.png" class="Penguin">
 <img id="Bag" src="BeanBag.png" style="position: absolute; width: 15%; left: 400px; top: 0px;"> 

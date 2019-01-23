@@ -4,8 +4,6 @@ let myClock
 let myClock2
 let myClock3
 let myClock4
-
-
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -22,92 +20,37 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
-
 function Bag(){
 	clearInterval(myClock)
 	myClock = setInterval(BagMovement, 10)
 }
-
-
 function BagMovement(){
 	document.getElementById('Bag').style.top = parseInt(document.getElementById('Bag').style.top) + 5 + 'px';
-
 	document.getElementById('myDiv').innerHTML = document.getElementById('Bag').style.top;
-
 	if (document.getElementById('myDiv').innerHTML == '800px'){
 		document.getElementById('Bag').style.left = Math.random() * 1000
 		document.getElementById('Bag').style.top = -200 + 'px'
 	}
-
 	
 	if (myHitOther('Bag', 'Penguin')){
 	   document.getElementById('Bag').style.left = Math.random() * 1000	
 	   document.getElementById('Bag').style.top = -200 + 'px'
 	   document.getElementById('Held').innerHTML = parseInt(document.getElementById('Held').innerHTML) + 1
-	}
 
-}
-
-function Bag2(){
-	clearInterval(myClock2)
-	myClock2 = setInterval(BagMovement2, 10)
-}
-
-
-function BagMovement2(){
-	document.getElementById('Bag2').style.top = parseInt(document.getElementById('Bag2').style.top) + 5 + 'px';
-
-	document.getElementById('myDiv2').innerHTML = document.getElementById('Bag2').style.top;
-
-	if (document.getElementById('myDiv2').innerHTML == '800px'){
-		document.getElementById('Bag2').style.left = Math.random() * 1000
-		document.getElementById('Bag2').style.top = -200 + 'px'
-	}
-
-	
-	if (myHitOther('Bag2', 'Penguin')){
-	   document.getElementById('Bag2').style.left = Math.random() * 1000	
-	   document.getElementById('Bag2').style.top = -200 + 'px'
-	   document.getElementById('Held').innerHTML = parseInt(document.getElementById('Held').innerHTML) + 1
-	}
-
-}
-
-function Fish(){
-	clearInterval(myClock3)
-	myClock3 = setInterval(FishMovement, 15)
-}
-
-
-function FishMovement(){
-	document.getElementById('Fish').style.top = parseInt(document.getElementById('Fish').style.top) + 5 + 'px';
-
-	document.getElementById('myDiv3').innerHTML = document.getElementById('Fish').style.top;
-
-	if (document.getElementById('myDiv3').innerHTML == '800px'){
-		document.getElementById('Fish').style.left = Math.random() * 1000
-		document.getElementById('Fish').style.top = -200 + 'px'
-	}
-
-	
-	if (myHitOther('Fish', 'Penguin')){
-	   document.getElementById('Fish').style.left = Math.random() * 1000;	
-	   document.getElementById('Fish').style.top = -200 + 'px';
-	   document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1;
+	if (document.getElementById('Held').innerHTML == 10){
+			document.getElementById('Held').innerHTML = 0
+			document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1
+		}
 
 		if (document.getElementById('Lives').innerHTML == 0){
 			document.getElementById('GameOver').play();
-
 			clearInterval(myClock);
 			document.getElementById('Bag').style.top = '-200px';
 		
 			clearInterval(myClock2);
 			document.getElementById('Bag2').style.top = '-200px';
-
 			clearInterval(myClock3);
 			document.getElementById('Fish').style.top = '-200px';
-
 			clearInterval(myClock4);
 			
 			 myClock5 = setTimeout(function(){
@@ -115,13 +58,82 @@ function FishMovement(){
 			}, 7000)
 		}
 	}
-
 }
+function Bag2(){
+	clearInterval(myClock2)
+	myClock2 = setInterval(BagMovement2, 10)
+}
+function BagMovement2(){
+	document.getElementById('Bag2').style.top = parseInt(document.getElementById('Bag2').style.top) + 5 + 'px';
+	document.getElementById('myDiv2').innerHTML = document.getElementById('Bag2').style.top;
+	if (document.getElementById('myDiv2').innerHTML == '800px'){
+		document.getElementById('Bag2').style.left = Math.random() * 1000
+		document.getElementById('Bag2').style.top = -200 + 'px'
+	}
+	
+	if (myHitOther('Bag2', 'Penguin')){
+	   document.getElementById('Bag2').style.left = Math.random() * 1000	
+	   document.getElementById('Bag2').style.top = -200 + 'px'
+	   document.getElementById('Held').innerHTML = parseInt(document.getElementById('Held').innerHTML) + 1
 
+		if (document.getElementById('Held').innerHTML == 10){
+			document.getElementById('Held').innerHTML = 0
+			document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1
+		}
+
+		if (document.getElementById('Lives').innerHTML == 0){
+			document.getElementById('GameOver').play();
+			clearInterval(myClock);
+			document.getElementById('Bag').style.top = '-200px';
+		
+			clearInterval(myClock2);
+			document.getElementById('Bag2').style.top = '-200px';
+			clearInterval(myClock3);
+			document.getElementById('Fish').style.top = '-200px';
+			clearInterval(myClock4);
+			
+			 myClock5 = setTimeout(function(){
+					// location.replace("https://www.google.com")
+			}, 7000)
+		}
+	}
+}
+function Fish(){
+	clearInterval(myClock3)
+	myClock3 = setInterval(FishMovement, 15)
+}
+function FishMovement(){
+	document.getElementById('Fish').style.top = parseInt(document.getElementById('Fish').style.top) + 5 + 'px';
+	document.getElementById('myDiv3').innerHTML = document.getElementById('Fish').style.top;
+	if (document.getElementById('myDiv3').innerHTML == '800px'){
+		document.getElementById('Fish').style.left = Math.random() * 1000
+		document.getElementById('Fish').style.top = -200 + 'px'
+	}
+	
+	if (myHitOther('Fish', 'Penguin')){
+	   document.getElementById('Fish').style.left = Math.random() * 1000;	
+	   document.getElementById('Fish').style.top = -200 + 'px';
+	   document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1;
+		if (document.getElementById('Lives').innerHTML == 0){
+			document.getElementById('GameOver').play();
+			clearInterval(myClock);
+			document.getElementById('Bag').style.top = '-200px';
+		
+			clearInterval(myClock2);
+			document.getElementById('Bag2').style.top = '-200px';
+			clearInterval(myClock3);
+			document.getElementById('Fish').style.top = '-200px';
+			clearInterval(myClock4);
+			
+			 myClock5 = setTimeout(function(){
+					// location.replace("https://www.google.com")
+			}, 7000)
+		}
+	}
+}
 function FishTiming(){
 	myClock4 = setInterval(Fish, 10000) 
 }
-
 function Movement(e) {
   var x = e.clientX;
   var coor = x + "px";
@@ -132,19 +144,32 @@ function Movement(e) {
         if (x >= 1000){ 
            document.getElementById("Penguin").style.left = "1000px"
         }
-
 }
-
 function PlaceBag(e){
 	var x = e.clientX;
 	if (x <= 235){
 		if (document.getElementById('Held').innerHTML > 0){
-			document.getElementById('Held').innerHTML = parseInt(document.getElementById('Held').innerHTML) - 1
 			document.getElementById('Collected').innerHTML = parseInt(document.getElementById('Collected').innerHTML) + 1
+			document.getElementById('Held').innerHTML = parseInt(document.getElementById('Held').innerHTML) - 1
+		}
+		
+		if (document.getElementById('Collected').innerHTML == 100){
+			document.getElementById('GameOver').play();
+			clearInterval(myClock);
+			document.getElementById('Bag').style.top = '-200px';
+		
+			clearInterval(myClock2);
+			document.getElementById('Bag2').style.top = '-200px';
+			clearInterval(myClock3);
+			document.getElementById('Fish').style.top = '-200px';
+			clearInterval(myClock4);
+			
+			 myClock5 = setTimeout(function(){
+					// location.replace("https://www.google.com")
+			}, 7000)
 		}
 	}
 }
-
 </script> 
 
 
@@ -154,26 +179,20 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
 table, th, td {
   border: 1px solid black;
 }
-
 th td {
   padding: 15px;
   text-align: left;
 }
-
 table#t01 th {
   background-color: black;
   color: white
 }
-
-
 table#t01 td {
   background-color: #eee;
 }
-
 div.Height {
   display: none;
 }  
@@ -209,4 +228,3 @@ div.Height {
 <img id="GameOver" src="http://pixelartmaker.com/art/9d337e9078f5faf.png" style="position: absolute; width: 405px; height: 315px; left: 700px; top: -400px;">
 
 </body>
-

@@ -1,9 +1,10 @@
+<audio id="GameOver" src="GameOver.mp3"></audio>  
 <script>
 let myClock
 let myClock2
 let myClock3
 let myClock4
-let myClock5
+
 
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -50,7 +51,7 @@ function BagMovement(){
 
 function Bag2(){
 	clearInterval(myClock2)
-	myClock = setInterval(BagMovement2, 10)
+	myClock2 = setInterval(BagMovement2, 10)
 }
 
 
@@ -91,9 +92,28 @@ function FishMovement(){
 
 	
 	if (myHitOther('Fish', 'Penguin')){
-	   document.getElementById('Fish').style.left = Math.random() * 1000	
-	   document.getElementById('Fish').style.top = -200 + 'px'
-	   document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1
+	   document.getElementById('Fish').style.left = Math.random() * 1000;	
+	   document.getElementById('Fish').style.top = -200 + 'px';
+	   document.getElementById('Lives').innerHTML = parseInt(document.getElementById('Lives').innerHTML) - 1;
+
+		if (document.getElementById('Lives').innerHTML == 0){
+			document.getElementById('GameOver').play();
+
+			clearInterval(myClock);
+			document.getElementById('Bag').style.top = '-200px';
+		
+			clearInterval(myClock2);
+			document.getElementById('Bag2').style.top = '-200px';
+
+			clearInterval(myClock3);
+			document.getElementById('Fish').style.top = '-200px';
+
+			clearInterval(myClock4);
+			
+			 myClock5 = setTimeout(function(){
+					// location.replace("https://www.google.com")
+			}, 7000)
+		}
 	}
 
 }
@@ -186,6 +206,7 @@ div.Height {
 <img id="Bag" src="BeanBag.png" style="position: absolute; width: 300px; height: 120px; left: 400px; top: -200px;">
 <img id="Bag2" src="BeanBag.png" style="position: absolute; width: 300px; height: 120px; left: 800px; top: -200px;">
 <img id="Fish" src="https://vignette.wikia.nocookie.net/club-penguin-rewritten/images/1/14/FluffyIF.png/revision/latest?cb=20170603132815" style="position: absolute; width: 300px; height: 120px; left: 800px; top: -200px; display: show;"> 
+<img id="GameOver" src="http://pixelartmaker.com/art/9d337e9078f5faf.png" style="position: absolute; width: 405px; height: 315px; left: 700px; top: -400px;">
 
 </body>
 

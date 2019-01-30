@@ -27,7 +27,7 @@ function Bag(){
 function BagMovement(){
 	document.getElementById('Bag').style.top = parseInt(document.getElementById('Bag').style.top) + 5 + 'px';
 	document.getElementById('myDiv').innerHTML = document.getElementById('Bag').style.top;
-	if (document.getElementById('myDiv').innerHTML == '800px'){
+	if (document.getElementById('myDiv').innerHTML == '700px'){
 		document.getElementById('Bag').style.left = Math.random() * 1000
 		document.getElementById('Bag').style.top = -200 + 'px'
 	}
@@ -66,7 +66,7 @@ function Bag2(){
 function BagMovement2(){
 	document.getElementById('Bag2').style.top = parseInt(document.getElementById('Bag2').style.top) + 5 + 'px';
 	document.getElementById('myDiv2').innerHTML = document.getElementById('Bag2').style.top;
-	if (document.getElementById('myDiv2').innerHTML == '800px'){
+	if (document.getElementById('myDiv2').innerHTML == '700px'){
 		document.getElementById('Bag2').style.left = Math.random() * 1000
 		document.getElementById('Bag2').style.top = -200 + 'px'
 	}
@@ -105,7 +105,7 @@ function Fish(){
 function FishMovement(){
 	document.getElementById('Fish').style.top = parseInt(document.getElementById('Fish').style.top) + 5 + 'px';
 	document.getElementById('myDiv3').innerHTML = document.getElementById('Fish').style.top;
-	if (document.getElementById('myDiv3').innerHTML == '800px'){
+	if (document.getElementById('myDiv3').innerHTML == '700px'){
 		document.getElementById('Fish').style.left = Math.random() * 1000
 		document.getElementById('Fish').style.top = -200 + 'px'
 	}
@@ -165,7 +165,7 @@ function PlaceBag(e){
 			clearInterval(myClock4);
 			
 			 myClock5 = setTimeout(function(){
-					// location.replace("https://www.google.com")
+					 location.replace("https://www.google.com")
 			}, 7000)
 		}
 	}
@@ -225,6 +225,5 @@ div.Height {
 <img id="Bag" src="BeanBag.png" style="position: absolute; width: 300px; height: 120px; left: 400px; top: -200px;">
 <img id="Bag2" src="BeanBag.png" style="position: absolute; width: 300px; height: 120px; left: 800px; top: -200px;">
 <img id="Fish" src="https://vignette.wikia.nocookie.net/club-penguin-rewritten/images/1/14/FluffyIF.png/revision/latest?cb=20170603132815" style="position: absolute; width: 300px; height: 120px; left: 800px; top: -200px; display: show;"> 
-<img id="GameOver" src="http://pixelartmaker.com/art/9d337e9078f5faf.png" style="position: absolute; width: 405px; height: 315px; left: 700px; top: -400px;">
-
+<img id="Game-Over" src="OCD.png" style="position: absolute; width: 720px; height: 480px; left: -1080px; top: 90px;">
 </body>
